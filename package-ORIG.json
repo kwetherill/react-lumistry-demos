@@ -1,0 +1,80 @@
+{
+  "homepage": ".",
+  "name": "lumistry",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@fontsource/inter": "^4.5.14",
+    "@fontsource/lato": "^4.5.10",
+    "@fontsource/poppins": "^4.5.10",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.11",
+    "@mui/x-date-pickers-pro": "^5.0.9",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@wojtekmaj/react-daterange-picker": "^4.1.0",
+    "bcryptjs": "^2.4.3",
+    "classnames": "^2.3.2",
+    "font-awesome": "^4.7.0",
+    "react": "^18.2.0",
+    "react-checkbox-tree": "^1.8.0",
+    "react-date-range": "^1.4.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.4.2",
+    "react-router-dom": "^6.11.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && mv build docs",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:storybook/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.22",
+    "@storybook/addon-interactions": "^7.0.22",
+    "@storybook/addon-links": "^7.0.22",
+    "@storybook/blocks": "^7.0.22",
+    "@storybook/preset-create-react-app": "^7.0.22",
+    "@storybook/react": "^7.0.22",
+    "@storybook/react-webpack5": "^7.0.22",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "eslint-plugin-storybook": "^0.6.12",
+    "prop-types": "^15.8.1",
+    "sass": "^1.55.0",
+    "storybook": "^7.0.22",
+    "webpack": "^5.88.0"
+  },
+  "browser": {
+    "crypto": false
+  }
+}
