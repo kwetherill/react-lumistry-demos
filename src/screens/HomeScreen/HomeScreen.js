@@ -1,30 +1,53 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-//import config from '../../data/config';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import Button from '../components/Button';
 import { useAuth } from '../../contexts/AuthContext';
 import './HomeScreen.scss';
 
-function HomeScreen() {
-    const { user, loading } = useAuth();  
+const HomeScreen = () => {
     const navigate = useNavigate();
+    const [code, setCode] = useState('');   
+    const [error, setError] = useState('');
 
-    React.useEffect(() => {
-        if(!user && !loading) navigate('/login');
-      }, [user, loading, navigate]);
+    const onInputChange = (e) => {
+        setCode(e.target.value);
+    }
+
+    const onSubmit = () => {
+        const code2 = code.trim();
+        
+        // TEMP
+        if(code2 === 'guestappt') {
+            window.location.href = 'guestappt/';
+        } else if(code2 === '') {
+            setError('Please enter a code');
+        } else {
+            setError('The demo code is invalid');
+        }
+    }
+
+
 
     return (
-        <div id="home-screen" className="is-inverse">
-            <i className="lds-logo" />
-            <div className="lds-logo-tag">Demos</div>
-            <div className="hs-firstname">
-                <input type="text" id="firstname" placeholder="First Name" />
-                <label htmlFor="firstname">First Name</label>
+        <div id="login-screen" className="is-inverse">
+
+            
+            <div className="lds-loginform is-rel is-debug222 is-abs-all" >
+
+
+
+                <input type="text" name="code" className="is-sprite is-text-white is-debug222"  style={{top: 146, left: 10, width: 300, }} value={code} onChange={onInputChange} />   
+
+                {error && <p className="is-text-white is-debug222 is-abs" style={{top: 180, left: 0, width: 300, fontSize: 14, }}>{error}</p>}
+
+                <button className="is-sprite is-debug22" onClick={onSubmit} style={{top: 210, height: 54, width: '100%', }}></button>
+
+
+                {/* <div className="is-sprite is-debug222 is-text-white2222" style={{top: 272, left: 0, width: 320, textAlign: 'center', color: '#fff', }}>asdfsdf</div> */}
+
             </div>
-            <Link to="/demos">Go to Demos</Link>
+            
         </div>
     );
-}
+};
 
 export default HomeScreen;

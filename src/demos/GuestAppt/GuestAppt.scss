@@ -1,0 +1,61 @@
+
+#guestappt {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    background-color: #555555;
+    height: 100%;
+    width: 100%;
+
+    // .lds-phonelayout {
+    //     min-width: 620px;
+    // }
+}
+
+#guestappt-stores {
+    height: 538px;
+    > * {
+        background-image: url('./images/guestappt-stores.png');
+        background-size: 595px 538px;
+        // border: red 1px solid;
+    }
+    .lds-spritesplit {
+        // width: 100%;
+    }
+}
+
+
+
+
+.lds-guestappt-header {
+    padding: 16px 16px;
+    > * {
+        display: block; 
+        text-align: center;
+    }
+    p {font-size: 15px; color: #414F6B;}
+    b {font-size: 18px; color: #101828;}
+}
+
+
+
+
+.lds-button {
+    height: 48px;
+    width: 100%;
+    color: #374D58;
+    border: #9CAFB9 1px solid;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    padding: 10px 8px;
+    text-align: center;
+    border-radius: 6px;
+
+    &.is-primary {
+        background-color: #2F65A4;
+        color: white;
+        border-width: 0;
+    }
+}
+

@@ -42,3 +42,41 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+// --- new reset --- //
+
+button {
+	background-color: transparent;
+	border: none;
+	height: 40px;
+	cursor: pointer;
+}
+
+
+input {
+	/* Remove default margins and padding */
+	margin: 0;
+	padding: 0;
+  
+	/* Remove default borders and outlines */
+	border: none;
+	outline: none;
+  
+	/* Standardize font inheritance */
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+  
+	/* Remove default background and text color */
+	background-color: transparent;
+	color: inherit;
+  
+	/* Standardize appearance for specific input types */
+	-webkit-appearance: none; /* For WebKit browsers (Chrome, Safari) */
+	-moz-appearance: none;    /* For Mozilla browsers (Firefox) */
+	appearance: none;         /* Standard property */
+  
+	/* Remove default button styles for submit/reset buttons */
+	cursor: pointer; /* Set a default cursor */
+  }

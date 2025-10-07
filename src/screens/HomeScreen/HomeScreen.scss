@@ -8,8 +8,20 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
     // background-color: #0063B2;
     // color: white;
     // border: 1px solid red;
         // background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+
+.lds-loginform {
+    background-image: url('../../images/lumistry-login.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 265px;
 }

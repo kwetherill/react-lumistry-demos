@@ -10,8 +10,8 @@ function App() {
     <AuthProvider>
     <Routes>
       <Route path="/" element={<HomeScreen />} />
-      <Route path="/demos" element={<DemosScreen />} />
-      <Route path="/login" element={<LoginScreen />} />
+      {/* <Route path="/demos" element={<DemosScreen />} />
+      <Route path="/login" element={<LoginScreen />} /> */}
     </Routes>
     </AuthProvider>
   );
