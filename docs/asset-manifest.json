@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-lumistry-demos/static/css/main.fa311529.css",
-    "main.js": "/react-lumistry-demos/static/js/main.69eed088.js",
-    "static/js/453.d3c88668.chunk.js": "/react-lumistry-demos/static/js/453.d3c88668.chunk.js",
+    "main.css": "/react-lumistry-demos/static/css/main.7194a626.css",
+    "main.js": "/react-lumistry-demos/static/js/main.2dc4b984.js",
+    "static/js/453.cc7da0e3.chunk.js": "/react-lumistry-demos/static/js/453.cc7da0e3.chunk.js",
     "index.html": "/react-lumistry-demos/index.html",
-    "main.fa311529.css.map": "/react-lumistry-demos/static/css/main.fa311529.css.map",
-    "main.69eed088.js.map": "/react-lumistry-demos/static/js/main.69eed088.js.map",
-    "453.d3c88668.chunk.js.map": "/react-lumistry-demos/static/js/453.d3c88668.chunk.js.map"
+    "main.7194a626.css.map": "/react-lumistry-demos/static/css/main.7194a626.css.map",
+    "main.2dc4b984.js.map": "/react-lumistry-demos/static/js/main.2dc4b984.js.map",
+    "453.cc7da0e3.chunk.js.map": "/react-lumistry-demos/static/js/453.cc7da0e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa311529.css",
-    "static/js/main.69eed088.js"
+    "static/css/main.7194a626.css",
+    "static/js/main.2dc4b984.js"
   ]
 }
