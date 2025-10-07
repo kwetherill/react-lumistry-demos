@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 // import './index.css';
 import './scss/styles.scss';
-// import App from './App';
-import App from './screens/HomeScreen';
+import App from './App';
+// import App from './screens/HomeScreen';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename="/react-lumistry-demos">
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

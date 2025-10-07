@@ -1,5 +1,4 @@
-
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import Button from '../components/Button';
 import './HomeScreen.scss';
 
@@ -12,6 +11,7 @@ function HomeScreen() {
                 <input type="text" id="firstname" placeholder="First Name" />
                 <label htmlFor="firstname">First Name</label>
             </div>
+            <Link to="/demos">Go to Demos</Link>
         </div>
     );
 }
