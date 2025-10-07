@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 // import './index.css';
 import './scss/styles.scss';
-import App from './App';
-// import App from './screens/HomeScreen';
 import reportWebVitals from './reportWebVitals';
+
+// demos
+import App from './App';
+// import App from './demos/GuestAppt/GuestAppt';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

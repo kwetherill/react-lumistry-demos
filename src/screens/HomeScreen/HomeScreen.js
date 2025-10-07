@@ -1,8 +1,19 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
+//import config from '../../data/config';
+import { useNavigate } from 'react-router-dom';
 // import Button from '../components/Button';
+import { useAuth } from '../../contexts/AuthContext';
 import './HomeScreen.scss';
 
 function HomeScreen() {
+    const { user, loading } = useAuth();  
+    const navigate = useNavigate();
+
+    React.useEffect(() => {
+        if(!user && !loading) navigate('/login');
+      }, [user, loading, navigate]);
+
     return (
         <div id="home-screen" className="is-inverse">
             <i className="lds-logo" />
