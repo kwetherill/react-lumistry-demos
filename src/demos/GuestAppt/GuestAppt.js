@@ -61,27 +61,93 @@ function Step_Stores(props) {
                 <div class="lds-spritesplit-right"></div>
             </div>
 
-            <ButtonGroup onNext={onNext2}  />
+            <ButtonGroup onNext={onNext2} onBack={onBack} />
 
         </Wrapper>
     );
 }
 function Step_Services(props) {
-    const {onNext, onBack } = props;
+    const {onNext, onBack, data, setDataValue } = props;
+    const [value, setValue] = useState(data?.store || false);
+
+    const onNext2 = () => {
+        if(!value) return;
+        setDataValue('store', value);
+        onNext();
+        // alert('value: ' + value);
+        // setValue('store', value);
+        // onNext();
+    }
+
     return (
         <Wrapper title="Select a service">
 
-<ButtonGroup onNext={onNext} onBack={onBack} />
+                <div class="lds-appsection">
+            <div class="lds-spritesplit" id="guestappt-services">
+                <div class="lds-spritesplit-left is-rel is-abs-all">
+
+
+                    <RadioButton onClick={() => setValue('1')} value="1" name="radiogroup" style={{top: 14, left: 16, height: 80, width: '100%', }} />
+                    <RadioButton onClick={() => setValue('2')} value="2" name="radiogroup" style={{top: 129, left: 16, height: 80, width: '100%', }}  />
+                    <RadioButton onClick={() => setValue('3')} value="3" name="radiogroup" style={{top: 242, left: 16, height: 80, width: '100%', }}  />
+                    <RadioButton onClick={() => setValue('4')} value="4" name="radiogroup" style={{top: 356, left: 16, height: 80, width: '100%', }}  />
+
+
+                </div>
+                <div class="lds-spritesplit-right"></div>
+            </div>
+            </div>
+
+
+            <ButtonGroup onNext={onNext2} onBack={onBack} />
         </Wrapper>
     );
 }
 function Step_Signin(props) {
-    const {onNext, onBack } = props;
+    const {onNext, onBack, data, setDataValue } = props;  
+    const [firstName, setFirstName] = useState(data?.firstName || '');
+    const [lastName, setLastName] = useState(data?.lastName || '');
+    const [email, setEmail] = useState(data?.email || '');
+    const [dob, setDob] = useState(data?.dob || '');
+
+    const onNext2 = () => {
+        if(!firstName || !lastName || !email || !dob) return;
+        setDataValue('firstName', firstName);
+        setDataValue('lastName', lastName);
+        setDataValue('email', email);
+        setDataValue('dob', dob);
+        onNext();
+    }
+
     return (
         <Wrapper title="Sign in or guest?">
 
+        <div class="lds-appsection" id="guestappt-signin-section">
+            <button className="lds-button">Sign in</button>
 
-            <ButtonGroup onNext={onNext} onBack={onBack} />
+            <h2>Continue as guest:</h2>
+            
+            <div class="lds-spritesplit" id="guestappt-signin">
+                <div class="lds-spritesplit-left is-rel is-abs-all">
+
+                    <input className="is-sprite is-debug2 is-bg-white" type="text" placeholder="First name" style={{top: 4, left: 10, height: 50, width: '98%', }} value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                    <input className="is-sprite is-debug2 is-bg-white" type="text" placeholder="Last name" style={{top: 77, left: 10, height: 50, width: '98%', }} value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                    <input className="is-sprite is-debug2 is-bg-white" type="text" placeholder="Email" style={{top: 152, left: 10, height: 50, width: '98%', }} value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input className="is-sprite is-debug2 is-bg-white" type="text" placeholder="DOB (MM/DD/YYYY)" style={{top: 226, left: 10, height: 50, width: '98%', }} value={dob} onChange={(e) => setDob(e.target.value)} />
+
+
+                </div>
+                <div class="lds-spritesplit-right"></div>
+            </div>
+
+            <p>By submitting your mobile number, you agree to receive calls, texts, or emails from Cameron’s Pharmacy. Text message & data rates may apply. Message frequency may vary. You can opt-out any time by replying STOP. Click <a href="#">HERE</a> to see our Privacy Policy. Call Cameron’s Pharmacy for further assistance.</p>
+
+            <p>By tapping “Next”, you agree to this Pharmacy's<br/><a href="#">Terms of Use</a> and <a href="#">Privacy Notice</a>.</p>
+
+            </div>
+
+
+            <ButtonGroup onNext={onNext2} onBack={onBack} />
         </Wrapper>
     );
 }
@@ -120,6 +186,55 @@ function Step_Date(props) {
     );
 }
 
+function Step_Time(props) {
+    const {onNext, onBack, data, setDataValue } = props;
+    const [time, setTime] = useState(data?.time || false);
+
+    const setTime2 = (value) => {
+        setTime(value);
+    }
+
+    const onNext2 = () => {
+        if(!time) return;
+        setDataValue('time', time);
+        onNext();
+    }
+    return (
+        <Wrapper title="Select a time">
+            <div className="lds-appsection" id="guestappt-time">
+
+                <h2>Friday April 07</h2>
+                <p>Central Time</p>
+
+                <div class="is-stack is-gap-8">
+                    <button onClick={() => setTime2('10:00 AM')} className={time === '10:00 AM' ? 'lds-button is-selected' : 'lds-button'}>10:00 AM</button>
+                    <button onClick={() => setTime2('10:30 AM')} className={time === '10:30 AM' ? 'lds-button is-selected' : 'lds-button'}>10:30 AM</button>
+                    <button onClick={() => setTime2('11:00 AM')} className={time === '11:00 AM' ? 'lds-button is-selected' : 'lds-button'}>11:00 AM</button>
+                    <button onClick={() => setTime2('11:30 AM')} className={time === '11:30 AM' ? 'lds-button is-selected' : 'lds-button'}>11:30 AM</button>
+                    <button onClick={() => setTime2('12:00 PM')} className={time === '12:00 PM' ? 'lds-button is-selected' : 'lds-button'}>12:00 PM</button>
+                    <button onClick={() => setTime2('12:30 PM')} className={time === '12:30 PM' ? 'lds-button is-selected' : 'lds-button'}>12:30 PM</button>
+                    <button onClick={() => setTime2('1:00 PM')} className={time === '1:00 PM' ? 'lds-button is-selected' : 'lds-button'}>1:00 PM</button>
+                    <button onClick={() => setTime2('1:30 PM')} className={time === '1:30 PM' ? 'lds-button is-selected' : 'lds-button'}>1:30 PM</button>
+                </div>
+                
+            </div>
+            <ButtonGroup onNext={onNext2} onBack={onBack} />
+        </Wrapper>
+    );
+}
+
+function Step_Confirm(props) {
+    const {onNext, onBack, data, setDataValue } = props;
+    const onClick = () => {
+        window.location.href = '?';
+    }
+    return (
+        <Wrapper title="Confirm your appointment">
+            <div id="guestappt-confirm" onClick={onClick}></div>
+        </Wrapper>
+    );
+}
+
     
 
 
@@ -129,11 +244,13 @@ function GuestAppt() {
     const [Page, setPage] = useState(null);
     const [step, setStep] = useState(0);
     const pages = [
-        // Step_Camera,
-        Step_Date,
-        Step_Stores, 
+        Step_Camera,
         Step_Services,
+        Step_Stores, 
         Step_Signin,
+        Step_Time,
+        Step_Date,
+        Step_Confirm,
     ];
 
     
@@ -157,7 +274,8 @@ function GuestAppt() {
     
     React.useEffect(() => {
         const Element = pages[step];
-        setPage(<Element onNext={onNext} onBack={onBack} data={data} setDataValue={setDataValue} setData={setData2} />);
+        const onBack2 = step > 1 ? onBack : undefined;
+        setPage(<Element onNext={onNext} onBack={onBack2} data={data} setDataValue={setDataValue} setData={setData2} />);
     }, [step]);
 
 

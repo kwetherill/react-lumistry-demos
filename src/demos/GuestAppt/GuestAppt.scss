@@ -18,14 +18,45 @@
     > * {
         background-image: url('./images/guestappt-stores.png');
         background-size: 595px 538px;
-        // border: red 1px solid;
-    }
-    .lds-spritesplit {
-        // width: 100%;
     }
 }
 
+#guestappt-services {
+    height: 472px;
+    > * {
+        background-image: url('./images/guestappt-services.png');
+        background-size: 595px 472px;
+    }
+    .lds-spritesplit-right {
+        width: 20px;
+    }
+}
 
+#guestappt-signin {
+    height: 280px;
+    > * {
+        background-image: url('./images/guestappt-signin.png');
+        background-size: 595px 280px;
+    }
+    .lds-spritesplit-right {
+        width: 20px;
+    }
+}
+
+#guestappt-signin-section {
+    h2 {
+        font-size: 18px;
+        color: #101828;
+        text-align: center;
+        padding: 24px 0;
+    }
+    p {
+        font-size: 14px;
+        text-align: center;
+        color: #414F6B;
+        padding-top: 24px;
+    }
+}
 
 
 .lds-guestappt-header {
@@ -34,8 +65,8 @@
         display: block; 
         text-align: center;
     }
-    p {font-size: 15px; color: #414F6B;}
-    b {font-size: 18px; color: #101828;}
+    p {font-size: 15px; color: #101828;}
+    b {font-size: 28px; color: #101828;}
 }
 
 
@@ -57,6 +88,11 @@
         color: white;
         border-width: 0;
     }
+    &.is-selected {
+        background-color: #0093E8;
+        color: white;
+        border-width: 0;
+    }
 }
 
 #guestappt-camera {
@@ -66,6 +102,14 @@
     background-position: center;
     background-repeat: no-repeat;
     
+}
+
+#guestappt-confirm {
+    background: center center no-repeat url('./images/guestappt-confirm.png');
+    background-size: contain;
+    width: 276px;
+    height: 458px;
+    margin: 80px auto 0;
 }
 
 #guestappt-date {
@@ -96,6 +140,20 @@
         opacity: 0;
 
         &.is-selected {opacity: 1;}
+    }
+}
+
+#guestappt-time {
+    h2 {
+        font-size: 18px;
+        color: #101828;
+        text-align: center;
+    }
+    p {
+        font-size: 14px;
+        color: #414F6B;
+        text-align: center;
+        margin-bottom: 16px;
     }
 }
 

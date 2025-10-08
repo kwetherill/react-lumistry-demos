@@ -26,6 +26,11 @@ html, body {
     color: #333;
 }
 
+p a {
+    color: #0093E8;
+    text-decoration: none;
+}
+
 #root {
     height: 100%;
 }
@@ -37,6 +42,8 @@ html {
     .is-abs-all > * {position: absolute; top: 0; left: 0; }
     .is-rel {position: relative; top: 0; left: 0; }
     .is-debug {outline: 1px solid red !important;}
+    .is-inline-block {display: inline-block;}
+    .is-block {display: block;}
 
     // text
     .is-text-white {color: white !important;}
@@ -100,6 +107,10 @@ input.is-sprite {
     line-height: 20px;
     color: #101828;
     outline: none;
+
+    &::placeholder {
+        color: #a9a9a9;
+    }
 }
 
 
