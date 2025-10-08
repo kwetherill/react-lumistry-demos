@@ -18,6 +18,7 @@ const HomeScreen = () => {
         // TEMP
         if(code2 === 'guestappt') {
             window.location.href = 'guestappt/';
+            // alert('code is correct'); 
         } else if(code2 === '') {
             setError('Please enter a code');
         } else {

@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.c4b315f8.css",
-    "main.js": "/static/js/main.5033cb23.js",
+    "main.js": "/static/js/main.09f7a5b7.js",
     "static/js/453.cc7da0e3.chunk.js": "/static/js/453.cc7da0e3.chunk.js",
     "static/media/youtpharmacy-logo-inv.png": "/static/media/youtpharmacy-logo-inv.d5fc84754ac8fefdd2f0.png",
     "static/media/lumistry-login.png": "/static/media/lumistry-login.d859048d866b5a916d3e.png",
     "index.html": "/index.html",
     "main.c4b315f8.css.map": "/static/css/main.c4b315f8.css.map",
-    "main.5033cb23.js.map": "/static/js/main.5033cb23.js.map",
+    "main.09f7a5b7.js.map": "/static/js/main.09f7a5b7.js.map",
     "453.cc7da0e3.chunk.js.map": "/static/js/453.cc7da0e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c4b315f8.css",
-    "static/js/main.5033cb23.js"
+    "static/js/main.09f7a5b7.js"
   ]
 }

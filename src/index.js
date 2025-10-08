@@ -6,13 +6,13 @@ import './scss/styles.scss';
 import reportWebVitals from './reportWebVitals';
 
 // demos
-import App from './App';
-// import App from './demos/GuestAppt/GuestAppt';
+// import App from './App';
+import App from './demos/GuestAppt/GuestAppt';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/react-lumistry-demos">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
