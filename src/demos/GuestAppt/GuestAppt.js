@@ -229,7 +229,7 @@ function Step_Confirm(props) {
         window.location.href = '?';
     }
     return (
-        <Wrapper title="Confirm your appointment">
+        <Wrapper title="Covid-19 Vaccination">
             <div id="guestappt-confirm" onClick={onClick}></div>
         </Wrapper>
     );
