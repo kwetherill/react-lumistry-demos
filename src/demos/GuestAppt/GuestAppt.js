@@ -145,8 +145,8 @@ function Step_Signin(props) {
 
                     <input className="is-sprite is-debug2 is-bg-white" type="text" placeholder="First name" style={{top: 4, left: 10, height: 50, width: '98%', }} value={firstName} onChange={(e) => setFirstName(e.target.value)} />
                     <input className="is-sprite is-debug2 is-bg-white" type="text" placeholder="Last name" style={{top: 77, left: 10, height: 50, width: '98%', }} value={lastName} onChange={(e) => setLastName(e.target.value)} />
-                    <input className="is-sprite is-debug2 is-bg-white" type="text" placeholder="Email" style={{top: 152, left: 10, height: 50, width: '98%', }} value={email} onChange={(e) => setEmail(e.target.value)} />
-                    <input className="is-sprite is-debug2 is-bg-white" type="text" placeholder="DOB (MM/DD/YYYY)" style={{top: 226, left: 10, height: 50, width: '98%', }} value={dob} onChange={(e) => setDob(e.target.value)} />
+                    <input className="is-sprite is-debug2 is-bg-white" type="email" placeholder="Email" style={{top: 152, left: 10, height: 50, width: '98%', }} value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input className="is-sprite is-debug2 is-bg-white" type="date" placeholder="DOB (MM/DD/YYYY)" style={{top: 226, left: 10, height: 50, width: '98%', }} value={dob} onChange={(e) => setDob(e.target.value)} />
 
 
                 </div>
