@@ -26,11 +26,16 @@ function Step_Stores(props) {
     const {onNext, onBack, data, setData, setDataValue } = props;
     const [value, setValue] = useState(data?.store || false);
 
+    // React.useEffect(() => {
+    //     setValue(data?.store || false);
+    // }, []);
+
 
 
     const onNext2 = () => {
         if(!value) return;
-        setDataValue('store', value);
+        setData({ store: value });
+        // setDataValue('store', value);
         onNext();
         // alert('value: ' + value);
         // setValue('store', value);
@@ -50,11 +55,11 @@ function Step_Stores(props) {
                 <div class="lds-spritesplit-left is-rel is-abs-all">
 
 
-                    <RadioButton onClick={() => setValue('1')} value="1" name="radiogroup" style={{top: 113, left: 20, height: 60, width: '100%', }} />
-                    <RadioButton onClick={() => setValue('2')} value="2" name="radiogroup" style={{top: 196, left: 20, height: 60, width: '100%', }}  />
-                    <RadioButton onClick={() => setValue('3')} value="3" name="radiogroup" style={{top: 279, left: 20, height: 60, width: '100%', }}  />
-                    <RadioButton onClick={() => setValue('4')} value="4" name="radiogroup" style={{top: 363, left: 20, height: 60, width: '100%', }}  />
-                    <RadioButton onClick={() => setValue('5')} value="5" name="radiogroup" style={{top: 449, left: 20, height: 60, width: '100%', }}  />
+                    <RadioButton onClick={() => setValue('1')} value="1" selected={value === '1'} name="radiogroup" style={{top: 113, left: 20, height: 60, width: '100%', }} />
+                    <RadioButton onClick={() => setValue('2')} value="2" selected={value === '2'} name="radiogroup" style={{top: 196, left: 20, height: 60, width: '100%', }}  />
+                    <RadioButton onClick={() => setValue('3')} value="3" selected={value === '3'} name="radiogroup" style={{top: 279, left: 20, height: 60, width: '100%', }}  />
+                    <RadioButton onClick={() => setValue('4')} value="4" selected={value === '4'} name="radiogroup" style={{top: 363, left: 20, height: 60, width: '100%', }}  />
+                    <RadioButton onClick={() => setValue('5')} value="5" selected={value === '5'} name="radiogroup" style={{top: 449, left: 20, height: 60, width: '100%', }}  />
 
 
                 </div>
@@ -67,12 +72,19 @@ function Step_Stores(props) {
     );
 }
 function Step_Services(props) {
-    const {onNext, onBack, data, setDataValue } = props;
-    const [value, setValue] = useState(data?.store || false);
+    const {onNext, onBack, data, setDataValue, setData } = props;
+    const [value, setValue] = useState(data?.service || false);
+
+    // React.useEffect(() => {
+    //     //setValue(data?.service || false);
+    //     if(data.service) alert(data.service);
+    // }, [data]);
+
 
     const onNext2 = () => {
         if(!value) return;
-        setDataValue('store', value);
+        // setData({ service: value });
+        setDataValue('service', value);
         onNext();
         // alert('value: ' + value);
         // setValue('store', value);
@@ -87,10 +99,10 @@ function Step_Services(props) {
                 <div class="lds-spritesplit-left is-rel is-abs-all">
 
 
-                    <RadioButton onClick={() => setValue('1')} value="1" name="radiogroup" style={{top: 14, left: 16, height: 80, width: '100%', }} />
-                    <RadioButton onClick={() => setValue('2')} value="2" name="radiogroup" style={{top: 129, left: 16, height: 80, width: '100%', }}  />
-                    <RadioButton onClick={() => setValue('3')} value="3" name="radiogroup" style={{top: 242, left: 16, height: 80, width: '100%', }}  />
-                    <RadioButton onClick={() => setValue('4')} value="4" name="radiogroup" style={{top: 356, left: 16, height: 80, width: '100%', }}  />
+                    <RadioButton onClick={() => setValue('1')} value="1" selected={value === '1'} name="radiogroup" style={{top: 14, left: 16, height: 80, width: '100%', }} />
+                    <RadioButton onClick={() => setValue('2')} value="2" selected={value === '2'} name="radiogroup" style={{top: 129, left: 16, height: 80, width: '100%', }}  />
+                    <RadioButton onClick={() => setValue('3')} value="3" selected={value === '3'} name="radiogroup" style={{top: 242, left: 16, height: 80, width: '100%', }}  />
+                    <RadioButton onClick={() => setValue('4')} value="4" selected={value === '4'} name="radiogroup" style={{top: 356, left: 16, height: 80, width: '100%', }}  />
 
 
                 </div>
@@ -104,7 +116,7 @@ function Step_Services(props) {
     );
 }
 function Step_Signin(props) {
-    const {onNext, onBack, data, setDataValue } = props;  
+    const {onNext, onBack, data, setDataValue, setData } = props;  
     const [firstName, setFirstName] = useState(data?.firstName || '');
     const [lastName, setLastName] = useState(data?.lastName || '');
     const [email, setEmail] = useState(data?.email || '');
@@ -112,10 +124,11 @@ function Step_Signin(props) {
 
     const onNext2 = () => {
         if(!firstName || !lastName || !email || !dob) return;
-        setDataValue('firstName', firstName);
-        setDataValue('lastName', lastName);
-        setDataValue('email', email);
-        setDataValue('dob', dob);
+        setData({ firstName, lastName, email, dob });
+        // setDataValue('firstName', firstName);
+        // setDataValue('lastName', lastName);
+        // setDataValue('email', email);
+        // setDataValue('dob', dob);
         onNext();
     }
 
@@ -248,8 +261,8 @@ function GuestAppt() {
         Step_Services,
         Step_Stores, 
         Step_Signin,
-        Step_Time,
         Step_Date,
+        Step_Time,
         Step_Confirm,
     ];
 
@@ -267,8 +280,9 @@ function GuestAppt() {
         setData({ ...data, [key]: value });
     }
 
-    const setData2 = (value) => {
-        setData({ ...data, ...value });
+    const setData2 = (obj) => {
+
+        if(obj) setData({ ...data, ...obj });
     }
 
     

@@ -7,7 +7,7 @@ function RadioButton(props) {
     const { label, value, name, style, className, onClick, selected } = props;
     return (
         <label class="lds-checkbox is-type-radio is-sprite is-debug222 is-size-lg" style={style} className={className}>{label}
-            <input type="radio" name={name} value={value} class="lds-checkbox-input" onClick={onClick} />
+            <input type="radio" name={name} value={value} checked={selected} class="lds-checkbox-input" onClick={onClick} />
             <span class="lds-checkbox-checkmark"></span>
         </label>
     );
@@ -58,7 +58,7 @@ function Wrapper(props) {
         </div>
         <div class="lds-phonelayout-content is-rel">
 
-            {loading && <div className="lds-loader is-fixedtop"><div className="lds-loader-spinner"></div></div>}
+            {loading && <div className="lds-loader is-fixedtop222"><div className="lds-loader-spinner"></div></div>}
 
             <GuestApptHeader title={title} />
             {children}
