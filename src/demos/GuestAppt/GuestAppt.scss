@@ -59,3 +59,45 @@
     }
 }
 
+#guestappt-camera {
+    background-color: black;
+    background-image: url('../../images/qrcode.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+#guestappt-date {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url('./images/guestappt-date.png');
+    background-size: 343px 632px;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 632px;
+    width: 343px;
+    margin: 0 auto;
+
+    > div {
+        cursor: pointer;
+        width: 43px;
+        height: 43px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #0093E8;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 18px;
+        color: white;
+        border-radius: 6px;
+        opacity: 0;
+
+        &.is-selected {opacity: 1;}
+    }
+}
+
+
+
