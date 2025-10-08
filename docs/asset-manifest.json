@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/react-lumistry-demos/static/css/main.7194a626.css",
-    "main.js": "/react-lumistry-demos/static/js/main.2dc4b984.js",
+    "main.css": "/react-lumistry-demos/static/css/main.149e9f03.css",
+    "main.js": "/react-lumistry-demos/static/js/main.d969a418.js",
     "static/js/453.cc7da0e3.chunk.js": "/react-lumistry-demos/static/js/453.cc7da0e3.chunk.js",
+    "static/media/youtpharmacy-logo-inv.png": "/react-lumistry-demos/static/media/youtpharmacy-logo-inv.d5fc84754ac8fefdd2f0.png",
+    "static/media/lumistry-login.png": "/react-lumistry-demos/static/media/lumistry-login.d859048d866b5a916d3e.png",
     "index.html": "/react-lumistry-demos/index.html",
-    "main.7194a626.css.map": "/react-lumistry-demos/static/css/main.7194a626.css.map",
-    "main.2dc4b984.js.map": "/react-lumistry-demos/static/js/main.2dc4b984.js.map",
+    "main.149e9f03.css.map": "/react-lumistry-demos/static/css/main.149e9f03.css.map",
+    "main.d969a418.js.map": "/react-lumistry-demos/static/js/main.d969a418.js.map",
     "453.cc7da0e3.chunk.js.map": "/react-lumistry-demos/static/js/453.cc7da0e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7194a626.css",
-    "static/js/main.2dc4b984.js"
+    "static/css/main.149e9f03.css",
+    "static/js/main.d969a418.js"
   ]
 }

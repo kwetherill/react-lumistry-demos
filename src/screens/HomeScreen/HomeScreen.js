@@ -13,7 +13,7 @@ const HomeScreen = () => {
     }
 
     const onSubmit = () => {
-        const code2 = code.trim();
+        const code2 = code.trim().toLowerCase();
         
         // TEMP
         if(code2 === 'guestappt') {
