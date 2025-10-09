@@ -33,7 +33,7 @@ function Wrapper(props) {
 
 
         </div>
-        <div class="lds-phonelayout-url">yourpharmacy.com</div> 
+        <a href="/" class="lds-phonelayout-url">yourpharmacy.com</a> 
         
 
     </div>

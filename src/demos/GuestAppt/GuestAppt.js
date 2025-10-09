@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Wrapper, RadioButton, GuestApptHeader, ButtonGroup } from './GuestAppt_comps';
+import { RadioButton, ButtonGroup } from './GuestAppt_comps';
+import Wrapper from '../../components/Wrapper';
+import { GuestHeader } from '../../components';
 import './GuestAppt.scss';
 
 
@@ -49,7 +51,7 @@ function Step_Stores(props) {
 
     return (
         <Wrapper title="Find a store">
-
+            <GuestHeader title="Book and appointment" description="Find a store" />
 
             <div class="lds-spritesplit" id="guestappt-stores">
                 <div class="lds-spritesplit-left is-rel is-abs-all">
@@ -92,9 +94,12 @@ function Step_Services(props) {
     }
 
     return (
-        <Wrapper title="Select a service">
+        <Wrapper>
+            <GuestHeader title="Book and appointment" description="Select a service" />
 
                 <div class="lds-appsection">
+
+
             <div class="lds-spritesplit" id="guestappt-services">
                 <div class="lds-spritesplit-left is-rel is-abs-all">
 
@@ -133,9 +138,11 @@ function Step_Signin(props) {
     }
 
     return (
-        <Wrapper title="Sign in or guest?">
+        <Wrapper>
+            <GuestHeader title="Book and appointment" description="Sign in or guest?" />
 
         <div class="lds-appsection" id="guestappt-signin-section">
+
             <button className="lds-button">Sign in</button>
 
             <h2>Continue as guest:</h2>
@@ -180,6 +187,7 @@ function Step_Date(props) {
 
     return (
         <Wrapper title="Covid-19 Vaccination">
+            <GuestHeader title="Book and appointment" description="Covid-19 Vaccination" />
 
 
             <div id="guestappt-date">
@@ -214,6 +222,8 @@ function Step_Time(props) {
     }
     return (
         <Wrapper title="Select a time">
+            <GuestHeader title="Book and appointment" description="Select a time" />
+
             <div className="lds-appsection" id="guestappt-time">
 
                 <h2>Friday April 07</h2>
@@ -242,7 +252,9 @@ function Step_Confirm(props) {
         window.location.href = '?';
     }
     return (
-        <Wrapper title="Covid-19 Vaccination">
+        <Wrapper>
+            <GuestHeader title="Book and appointment" description="Covid-19 Vaccination" />
+            
             <div id="guestappt-confirm" onClick={onClick}></div>
         </Wrapper>
     );

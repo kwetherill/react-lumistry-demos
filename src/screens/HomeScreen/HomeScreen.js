@@ -38,7 +38,11 @@ const HomeScreen = () => {
         <div id="login-screen" className="is-inverse">
 
             <div className="is-stack is-gap-8">
-                <div className="lds-logo" style={{marginBottom: 16, }}></div>
+                <div  style={{marginBottom: 16, }}>
+                <div className="lds-logo"></div>
+                <div className="lds-logo-tag">Prototype</div>
+
+                </div>
                 
                 <AltInput name="code" label="Enter code" className="is-inverse" value={code} onChange={onInputChange} message={error} style={{width: 270, height: 80, }} />
                 

@@ -180,6 +180,7 @@
     }
     
     &-url {
+        display: block;
         background-color: #F4F8FB;
         color: #525252;
         text-align: center;
@@ -187,6 +188,7 @@
         font-family: 'Lato', sans-serif;
         height: 48px;
         border-top: 1px solid #E4E7EC;
+        text-decoration: none;
     }
 
 
@@ -386,6 +388,7 @@ animation: rotation 1s linear infinite;
 }
 .lds-altinput input{
   display: block;
+  z-index: 3;
   width: 100%;
   height: 58px;
   background: transparent;
