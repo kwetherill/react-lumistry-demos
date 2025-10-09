@@ -38,12 +38,18 @@ p a {
 // global modifiers
 html {
 
+
     .is-abs {position: absolute; top: 0; left: 0; }
     .is-abs-all > * {position: absolute; top: 0; left: 0; }
     .is-rel {position: relative; top: 0; left: 0; }
     .is-debug {outline: 1px solid red !important;}
     .is-inline-block {display: inline-block;}
     .is-block {display: block;}
+
+    .is-margin-auto {margin: 0 auto;}
+
+    // width
+    .is-width-100p {width: 100%;}
 
     // text
     .is-text-white {color: white !important;}
@@ -74,6 +80,7 @@ html {
         overflow-x: hidden;
     }
 
+    // gap
     .is-gap-4 {gap: 0;}
     .is-gap-4 {gap: 4px;}
     .is-gap-8 {gap: 8px;}
@@ -119,6 +126,7 @@ input.is-sprite {
 
 
 .lds-logo {
+    display: block;
     background-image: url('../images/lumistry-logo-inv.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -143,11 +151,19 @@ input.is-sprite {
     width: 100px;
     height: 100px;
 
+    // types
     &.is-type-youtpharmacy-inv {
         background-image: url('../images/youtpharmacy-logo-inv.png');
         width: 166px;
         height: 59px;
     }
+    &.is-type-youtpharmacy {
+        background-image: url('../images/yourpharmacy-logo.png');
+        width: 226px;
+        height: 71px;
+    }
+    
+
 }
 
 

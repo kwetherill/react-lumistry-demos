@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AltInput } from '../../components';
 import { useAuth } from '../../contexts/AuthContext';
+import demoData from '../../data/demoData.js';
 import './HomeScreen.scss';
 
 const HomeScreen = () => {
@@ -9,16 +11,20 @@ const HomeScreen = () => {
     const [error, setError] = useState('');
 
     const onInputChange = (e) => {
+        setError('');
         setCode(e.target.value);
     }
 
+
     const onSubmit = () => {
         const code2 = code.trim().toLowerCase();
+        // const demo = demos[code2];
+        const demo = demoData.find(item => item.code === code2);
         
-        // TEMP
-        if(code2 === 'guestappt') {
-            window.location.href = 'guestappt/';
-            // alert('code is correct'); 
+
+        if(demo) {
+            window.location.href = demo.url;
+            // alert('code is correct: ' + demo.url); 
         } else if(code2 === '') {
             setError('Please enter a code');
         } else {
@@ -31,8 +37,33 @@ const HomeScreen = () => {
     return (
         <div id="login-screen" className="is-inverse">
 
+            <div className="is-stack is-gap-8">
+                <div className="lds-logo" style={{marginBottom: 16, }}></div>
+                
+                <AltInput name="code" label="Enter code" className="is-inverse" value={code} onChange={onInputChange} message={error} style={{width: 270, height: 80, }} />
+                
+                <button className="lds-button is-white is-size-lg" onClick={onSubmit}>Enter</button>
+
+            </div>
             
-            <div className="lds-loginform is-rel is-debug222 is-abs-all" >
+{/*             
+            <div className="lds-loginform is-rel is-debug is-abs-all" >
+
+                <input type="text" name="code" className="is-sprite is-text-white is-debug222"  style={{top: 146, left: 10, width: 300, }} value={code} onChange={onInputChange} />   
+                {error && <p className="is-text-white is-debug222 is-abs" style={{top: 180, left: 0, width: 300, fontSize: 14, }}>{error}</p>}
+                <button className="is-sprite is-debug22" onClick={onSubmit} style={{top: 210, height: 54, width: '100%', }}></button>
+
+            </div> */}
+            
+        </div>
+    );
+};
+
+export default HomeScreen;
+
+
+/*
+            <div className="lds-loginform is-rel is-debug is-abs-all" >
 
 
 
@@ -43,12 +74,7 @@ const HomeScreen = () => {
                 <button className="is-sprite is-debug22" onClick={onSubmit} style={{top: 210, height: 54, width: '100%', }}></button>
 
 
-                {/* <div className="is-sprite is-debug222 is-text-white2222" style={{top: 272, left: 0, width: 320, textAlign: 'center', color: '#fff', }}>asdfsdf</div> */}
 
-            </div>
-            
-        </div>
-    );
-};
+                </div>
 
-export default HomeScreen;
+*/

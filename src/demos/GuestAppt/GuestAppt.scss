@@ -72,38 +72,6 @@
 
 
 
-.lds-button {
-    height: 48px;
-    width: 100%;
-    color: #374D58;
-    border: #9CAFB9 1px solid;
-    font-size: 16px;
-    font-family: 'Lato', sans-serif;
-    padding: 10px 8px;
-    text-align: center;
-    border-radius: 6px;
-
-    &.is-primary {
-        background-color: #2F65A4;
-        color: white;
-        border-width: 0;
-    }
-    &.is-selected {
-        background-color: #0093E8;
-        color: white;
-        border-width: 0;
-    }
-}
-
-#guestappt-camera {
-    background-color: black;
-    background-image: url('../../images/qrcode.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-}
-
 #guestappt-confirm {
     background: center center no-repeat url('./images/guestappt-confirm.png');
     background-size: contain;

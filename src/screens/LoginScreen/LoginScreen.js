@@ -4,6 +4,9 @@ import { useAuth } from '../../contexts/AuthContext';
 import './LoginScreen.scss';
 
 const LoginScreen = () => {
+
+
+    
     return (
         <div id="login-screen">
             <i className="lds-logo" />

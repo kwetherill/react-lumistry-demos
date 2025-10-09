@@ -7,7 +7,8 @@ import reportWebVitals from './reportWebVitals';
 
 // demos
 // import App from './App';
-import App from './demos/GuestAppt/GuestAppt';
+// import App from './demos/GuestAppt/GuestAppt'; // Guest Appt
+import App from './demos/GuestRefill/GuestRefill'; // Guest Refill
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

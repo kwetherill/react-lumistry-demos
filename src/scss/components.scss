@@ -188,6 +188,16 @@
         height: 48px;
         border-top: 1px solid #E4E7EC;
     }
+
+
+    // types:
+    &.is-type-camera {
+        background-color: black;
+        background-image: url('../images/qrcode.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
 
 
@@ -276,3 +286,140 @@ animation: rotation 1s linear infinite;
 }
 } 
 */
+
+
+
+.lds-guest-header {
+    padding: 16px 16px;
+    p, b {
+        display: block; 
+        text-align: center;
+        color: #101828;
+    }
+    p {font-size: 15px; }
+    b {font-size: 28px; }
+}
+
+
+
+// buttons
+.lds-button {
+    height: 48px;
+    width: 100%;
+    color: #374D58;
+    border: #9CAFB9 1px solid;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    padding: 10px 8px;
+    text-align: center;
+    border-radius: 6px;
+
+    &.is-primary {
+        background-color: #2F65A4;
+        color: white;
+        border-width: 0;
+    }
+    &.is-selected {
+        background-color: #0093E8;
+        color: white;
+        border-width: 0;
+    }
+
+    &.is-white {
+        background-color: white;
+        color: #2F65A4;
+        border-width: 0;
+    }
+
+    &.is-size-lg {
+        height: 54px;
+    }
+}
+
+
+
+// input
+.lds-input {
+    width: 350px;
+    height: 44px;
+    background: white;
+    border: solid 1px #BCC8CE;
+    transition: all .3s ease;
+    padding: 0 14px 0;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #101828;
+
+    &::placeholder {
+        color: #748995;
+    }
+}
+.lds-input:focus {
+    border-color: #27A4ED;
+}
+
+
+// from https://codepen.io/kod101/pen/gdjPaW
+
+.lds-altinput{
+  position: relative;
+  width: 350px;
+
+  &.is-iconic  {
+    input {padding-left: 44px;}
+    label {left: 36px;}
+  }
+
+  &.is-inverse {
+    input {
+        color: white; 
+        background-color: rgba(255, 255, 255, 0.1); 
+        // border-color: white; 
+        &:focus {
+            border-color: white; 
+        }
+    }
+    label {color: rgba(255, 255, 255, 0.6);}
+    small {color: white;}
+  }
+
+}
+.lds-altinput input{
+  display: block;
+  width: 100%;
+  height: 58px;
+  background: transparent;
+  border: solid 1px #BCC8CE;
+  transition: all .3s ease;
+  padding: 8px 14px 0;
+  color: #101828;
+  font-size: 18px;
+  border-radius: 6px;
+}
+.lds-altinput input:focus{
+  border-color: #27A4ED;
+}
+.lds-altinput label{
+  position: absolute;
+  cursor: text;
+  z-index: 2;
+  top: 15px;
+  left: 4px;
+  font-size: 18px;
+  font-weight: 400;
+//   background: #fff;
+  padding: 0 10px;
+  color: #748995;
+  transition: all .3s ease
+}
+.lds-altinput input:focus + label,
+.lds-altinput input:valid + label{
+  font-size: 13px;
+  top: 4px;
+}
+.lds-altinput small {
+  font-size: 13px;
+  color: #748995;
+  padding-top: 4px;
+  display: block;
+}

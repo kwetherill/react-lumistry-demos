@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wrapper, RadioButton, GuestApptHeader, ButtonGroup } from './components';
+import { Wrapper, RadioButton, GuestApptHeader, ButtonGroup } from './GuestAppt_comps';
 import './GuestAppt.scss';
 
 
@@ -11,7 +11,7 @@ function Step_Camera(props) {
     const {onNext, onBack } = props;
     return (
 
-        <div class="lds-phonelayout" id="guestappt-camera" onClick={onNext}>
+        <div class="lds-phonelayout is-type-camera" onClick={onNext}>
 
 
         
