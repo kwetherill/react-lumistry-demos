@@ -4,7 +4,7 @@ import { Wrapper, AltInput, Input } from '../../components';
 import { GuestHeader, GuestButtonGroup } from '../../components';
 import './GuestRefill.scss';
 
-export { Step_Number, Step_Confirm, Step_Camera, Step_Signin };
+export { Step_Number, Step_Confirm, Step_Camera, Step_Signin, Step_PatientInfo, Step_Register };
 
 // steps
 
@@ -24,7 +24,7 @@ function Step_Camera(props) {
     
 
 function Step_Confirm(props){
-    const {onNext, onBack, data, setDataValue } = props;
+    const {onNext, onBack, data, setDataValue, version } = props;
     return (
         <Wrapper title="Confirm">
             <div className="lds-appsection is-stack" id="guestrefill-confirm">
@@ -38,13 +38,21 @@ function Step_Confirm(props){
 
             {/* <GuestButtonGroup onNext={onNext} onBack={onBack} />     */}
 
+            
             <hr />
-
+                <div>
             <div className="is-text-formatted is-text-center">
-                <h2>Track your order</h2>
+                <h2>Register with us</h2>
                 <p style={{maxWidth: 300, margin: '0 auto', }}>Please provide the patient info and your contact info in case we have questions</p>
+                <ul>
+                    <li>Value prop 1</li>
+                    <li>Value prop 1</li>
+                    <li>Value prop 1</li>
+                </ul>
             </div>
-            <button onClick={onNext} className="lds-button is-primary is-size-lg is-width-100p">Track your order</button>
+            </div>
+           
+            <button onClick={onNext} className="lds-button is-primary is-size-lg is-width-100p">Continue</button>
 
             </div>
         </Wrapper>
@@ -147,7 +155,7 @@ function Step_Number(props) {
 
 
 function Step_Signin(props) {
-    const {onNext, onBack, data, setDataValue, setData } = props;  
+    const {onNext, onBack, data, setDataValue, setData, version } = props;  
     const [error, setError] = useState(false);
     const [firstName, setFirstName] = useState(data?.firstName || '');
     const [lastName, setLastName] = useState(data?.lastName || '');
@@ -186,6 +194,7 @@ function Step_Signin(props) {
                 <AltInput label="Last name" className="is-width-100p" value={lastName} onChange={(e) => setLastName(e.target.value)} />
                 <AltInput label="DOB (MM/DD/YYYY)" className="is-width-100p" value={dob} onChange={(e) => setDob(e.target.value)} />
                 <AltInput label="Phone" className="is-width-100p" value={phone} onChange={(e) => setPhone(e.target.value)} />
+
                 {/* <AltInput label="Email" className="is-width-100p" value={email} onChange={(e) => setEmail(e.target.value)} /> */}
                 
             </div>
@@ -196,11 +205,90 @@ function Step_Signin(props) {
             
             
 
-            <button onClick={onNext2} style={{marginTop: 24, }}  className="lds-button is-primary is-size-lg is-width-100p">Submit</button>
+            {/* <button onClick={onNext2} style={{marginTop: 24, }}  className="lds-button is-primary is-size-lg is-width-100p">Submit</button> */}
            
 
             <p>By submitting your mobile number, you agree to receive calls, texts, or emails from Cameron’s Pharmacy. Text message & data rates may apply. Message frequency may vary. You can opt-out any time by replying STOP. Click <a href="#">HERE</a> to see our Privacy Policy. Call Cameron’s Pharmacy for further assistance.</p>
             <p>By tapping “Next”, you agree to this Pharmacy's<br/><a href="#">Terms of Use</a> and <a href="#">Privacy Notice</a>.</p>
+
+
+
+            </div>
+            <GuestButtonGroup onNext={onNext2} onBack={onBack} />
+
+
+
+        </Wrapper>
+    );
+}
+
+
+
+
+
+
+function Step_PatientInfo(props) {
+    const {onNext, onBack, data, setDataValue, setData, version } = props;  
+    const [error, setError] = useState(false);
+    const [firstName, setFirstName] = useState(data?.firstName || '');
+    const [lastName, setLastName] = useState(data?.lastName || '');
+    // const [email, setEmail] = useState(data?.email || '');
+    const [phone, setPhone] = useState(data?.phone || '');
+    const [dob, setDob] = useState(data?.dob || '');
+
+    const onNext2 = () => {
+        setError(false);
+        if(!firstName || !lastName || !phone || !dob){
+            setError(true);
+            return;
+        }
+        setData({ firstName, lastName, phone, dob });
+        onNext();
+    }
+
+    return (
+        <Wrapper>
+
+            <GuestHeader title="Refill prescription" description="Patient info" />
+
+            <div className="is-text-formatted is-text-center"><p>Please provide the patient info and your contact info in case we have questions</p></div>
+
+
+
+        <div class="lds-appsection" id="guestappt-signin-section">
+
+            
+
+            
+            <div class="is-stack is-gap-16">
+
+
+
+            {error && <Error message="All of the fields are required." />}
+
+                <AltInput label="First name" className="is-width-100p" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                <AltInput label="Last name" className="is-width-100p" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                <AltInput label="DOB (MM/DD/YYYY) 222" className="is-width-100p" value={dob} onChange={(e) => setDob(e.target.value)} />
+                <AltInput label="Phone" className="is-width-100p" value={phone} onChange={(e) => setPhone(e.target.value)} />
+
+                {/* <AltInput label="Email" className="is-width-100p" value={email} onChange={(e) => setEmail(e.target.value)} /> */}
+                
+            </div>
+
+
+
+
+            <GuestButtonGroup onNext={onNext2} onBack={onBack} noPadding={true} />
+            
+            
+
+            {/* <button onClick={onNext2} style={{marginTop: 24, }}  className="lds-button is-primary is-size-lg is-width-100p">Submit</button> */}
+           
+
+            <p>By submitting your mobile number, you agree to receive calls, texts, or emails from Cameron’s Pharmacy. Text message & data rates may apply. Message frequency may vary. You can opt-out any time by replying STOP. Click <a href="#">HERE</a> to see our Privacy Policy. Call Cameron’s Pharmacy for further assistance.</p>
+            <p>By tapping “Next”, you agree to this Pharmacy's<br/><a href="#">Terms of Use</a> and <a href="#">Privacy Notice</a>.</p>
+
+
 
             </div>
 
@@ -210,4 +298,23 @@ function Step_Signin(props) {
     );
 }
 
+
+function Step_Register(props) {
+    const {onNext, onBack, data, setDataValue, setData, version } = props;
+    return (
+        <Wrapper>
+            <GuestHeader title="Refill prescription" description="Register with us" />
+
+        <div className="lds-appsection">
+            <div style={{border: '#ccc 1px solid', height: 400, width: '100%'}}></div>
+        </div>
+
+            <GuestButtonGroup onNext={onNext} onBack={onBack} />
+        </Wrapper>
+
+
+
+        
+    );
+}
 

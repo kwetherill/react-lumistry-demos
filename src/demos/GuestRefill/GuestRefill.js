@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Step_Number, Step_Confirm, Step_Camera, Step_Signin } from './GuestRefill_steps';
+import { Step_Number, Step_Confirm, Step_Camera, Step_Signin, Step_PatientInfo, Step_Register } from './GuestRefill_steps';
 import './GuestRefill.scss';
 
 function Step_Phone(props){
@@ -20,12 +20,14 @@ const versionPages = [
         Step_Camera,
         Step_Number,
         Step_Confirm,
-        Step_Signin,
+        Step_Register,
     ],
     [ // version 2
         Step_Camera,
         Step_Number,
+        Step_PatientInfo,
         Step_Confirm,
+        Step_Register,
     ],
 ];
 
@@ -49,13 +51,14 @@ function GuestRefill() {
             setVersion(version2);
             setPages(versionPages[index]);
         }
+        console.log('------ version 222', version2);
     }, []);
 
     // setp through pages
     React.useEffect(() => {
         const Element = pages[step];
         const onBack2 = step > 1 ? onBack : undefined;
-        setPage(<Element onNext={onNext} onBack={onBack2} data={data} setDataValue={setDataValue} setData={setData2} />);
+        setPage(<Element onNext={onNext} onBack={onBack2} version={version} data={data} setDataValue={setDataValue} setData={setData2} />);
     }, [step]);
     
 
