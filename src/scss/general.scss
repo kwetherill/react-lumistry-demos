@@ -55,6 +55,16 @@ html {
     .is-text-white {color: white !important;}
     
     .is-inverse {color: white;}
+    .is-text-center {text-align: center;}
+
+    .is-text-formatted {
+        a {color: #0093E8;text-decoration: none;}
+        a:hover {text-decoration: underline;}
+        p {font-size: 16px;line-height: 1.5;}
+        h2 {font-size: 24px;line-height: 1.2;margin-bottom: 16px;}
+        p b {font-weight: 700; color: #000;}
+    }
+
     
     // bg
     .is-bg-ltgray {background-color: #F5F9FD;}
@@ -165,6 +175,11 @@ input.is-sprite {
         background-image: url('../images/yourpharmacy-logo.png');
         width: 226px;
         height: 71px;
+    }
+    &.is-type-qrcode {
+        background-image: url('../images/qrcode.png');
+        width: 200px;
+        height: 200px;
     }
     
 

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { RadioButton, ButtonGroup } from './GuestAppt_comps';
 import Wrapper from '../../components/Wrapper';
-import { GuestHeader } from '../../components';
+import { GuestHeader, GuestButtonGroup, RadioButton } from '../../components';
 import './GuestAppt.scss';
 
 
@@ -68,7 +67,7 @@ function Step_Stores(props) {
                 <div class="lds-spritesplit-right"></div>
             </div>
 
-            <ButtonGroup onNext={onNext2} onBack={onBack} />
+            <GuestButtonGroup onNext={onNext2} onBack={onBack} />
 
         </Wrapper>
     );
@@ -116,7 +115,7 @@ function Step_Services(props) {
             </div>
 
 
-            <ButtonGroup onNext={onNext2} onBack={onBack} />
+            <GuestButtonGroup onNext={onNext2} onBack={onBack} />
         </Wrapper>
     );
 }
@@ -167,7 +166,7 @@ function Step_Signin(props) {
             </div>
 
 
-            <ButtonGroup onNext={onNext2} onBack={onBack} />
+            <GuestButtonGroup onNext={onNext2} onBack={onBack} />
         </Wrapper>
     );
 }
@@ -202,7 +201,7 @@ function Step_Date(props) {
                 <div onClick={() => setDate2(26)} className={date === 26 ? 'is-selected' : ''} style={{top: 539, left: 150}}>26</div>  
             </div>
 
-            <ButtonGroup onNext={onNext2} onBack={onBack} />
+            <GuestButtonGroup onNext={onNext2} onBack={onBack} />
         </Wrapper>
     );
 }
@@ -241,7 +240,7 @@ function Step_Time(props) {
                 </div>
                 
             </div>
-            <ButtonGroup onNext={onNext2} onBack={onBack} />
+            <GuestButtonGroup onNext={onNext2} onBack={onBack} />
         </Wrapper>
     );
 }
@@ -254,7 +253,7 @@ function Step_Confirm(props) {
     return (
         <Wrapper>
             <GuestHeader title="Book and appointment" description="Covid-19 Vaccination" />
-            
+
             <div id="guestappt-confirm" onClick={onClick}></div>
         </Wrapper>
     );

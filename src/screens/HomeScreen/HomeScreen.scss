@@ -1,23 +1,53 @@
 
 
-
 #home-screen {
+    border: 1px solid red;
+    margin: 0 auto;
+    max-width: 520px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 100%;
-    max-width: 390px;
+
+}
+
+#home-screen-content {
+    width: 100%;
+    background-color: white;
     margin: 0 auto;
-    // background-color: #0063B2;
-    // color: white;
-    // border: 1px solid red;
-        // background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    padding: 20px;
+}   
+
+#home-screen-top {
+    margin-bottom: 24px;
+}
+
+#home-screen-main {
+    margin-bottom: 24px;
+}
+
+#home-screen-buttons {
+    margin-top: 24px;
 }
 
 
-.lds-loginform {
+
+#login-screen {
+    border: 1px solid red;
+    margin: 0 auto;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#login-screen-form {
     background-image: url('../../images/lumistry-login.png');
     background-size: cover;
     background-position: center;

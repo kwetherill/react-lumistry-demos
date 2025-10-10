@@ -195,7 +195,7 @@
     // types:
     &.is-type-camera {
         background-color: black;
-        background-image: url('../images/qrcode.png');
+        background-image: url('../images/camera-qrcode.png');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -306,7 +306,9 @@ animation: rotation 1s linear infinite;
 
 // buttons
 .lds-button {
+    display: inline-block;
     height: 48px;
+    text-decoration: none !important;
     width: 100%;
     color: #374D58;
     border: #9CAFB9 1px solid;
@@ -321,6 +323,13 @@ animation: rotation 1s linear infinite;
         color: white;
         border-width: 0;
     }
+
+    &.is-tertiary {
+        background-color: transparent;
+        // color: white;
+        border-width: 0;
+    }
+
     &.is-selected {
         background-color: #0093E8;
         color: white;
@@ -331,6 +340,11 @@ animation: rotation 1s linear infinite;
         background-color: white;
         color: #2F65A4;
         border-width: 0;
+    }
+    &.is-green {
+      background-color: green;
+      color: white;
+      border-width: 0;
     }
 
     &.is-size-lg {

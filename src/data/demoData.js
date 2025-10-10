@@ -1,13 +1,21 @@
 const data = [
     {
       "code": "guestappt",
-      "url": "guestappt/",
-      "title": "Guest Appointment"
+      "name": "guestappt",
+      "title": "Guest Appointment",
+      "description": "This is a demo of the guest appointment page",
+      "type": "test",
+      "device": "phone",
+      "urls": ["guestappt/#1", "guestappt/#2"],
     },
     {
       "code": "guestrefill",
-      "url": "guestrefill/",
-      "title": "Guest Refill"
+      "name": "guestrefill",
+      "title": "Guest Refill",
+      "description": "This is a demo of the guest refill page",
+      "type": "test",
+      "device": "phone",
+      "urls": ["guestrefill/#1", "guestrefill/#2"],
     }
 ];
 
