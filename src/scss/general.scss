@@ -31,6 +31,12 @@ p a {
     text-decoration: none;
 }
 
+hr {
+    border: 0 solid #E0E0E0;
+    border-top-width: 1px;
+    margin: 4px 0;
+}
+
 #root {
     height: 100%;
 }
@@ -58,11 +64,12 @@ html {
     .is-text-center {text-align: center;}
 
     .is-text-formatted {
+        p, li {font-size: 16px;line-height: 1.5; padding-bottom: 16px; color: #555;}
+        li {padding-bottom: 4px;}
+        p b {font-weight: 700; color: #000;}
         a {color: #0093E8;text-decoration: none;}
         a:hover {text-decoration: underline;}
-        p {font-size: 16px;line-height: 1.5;}
         h2 {font-size: 24px;line-height: 1.2;margin-bottom: 16px;}
-        p b {font-weight: 700; color: #000;}
     }
 
     

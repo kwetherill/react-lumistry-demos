@@ -1,8 +1,25 @@
 #guestrefill {
     height: 100%;
+    background-color: #555;
 }
 
 .lds-graphic.is-type-refillconfirm {
     background-image: url('./images/guestrefill-confirm.png');
 }
     
+
+
+#guestappt-signin-section {
+    h2 {
+        font-size: 18px;
+        color: #101828;
+        text-align: center;
+        padding: 24px 0;
+    }
+    p {
+        font-size: 14px;
+        text-align: center;
+        color: #414F6B;
+        padding-top: 24px;
+    }
+}

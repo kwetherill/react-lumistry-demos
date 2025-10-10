@@ -73,24 +73,40 @@ const HomeScreen = () => {
 
 
                 <div className="is-group is-gap-8" id="home-screen-top">
-                    <AltInput name="code" label="Code" className="is-width-100p" value={code} onChange={onInputChange} message={error} />
-                    <button className="lds-button is-size-lg" onClick={onSubmit}>Enter</button>
+                    <input type="text" className="lds-input" value={code} placeholder={localData.demo.code} onChange={onInputChange} />
+                    {/* <AltInput name="code" label="Code" className="is-width-100p" value={code} onChange={onInputChange} message={error} /> */}
+                    <button className="lds-button" onClick={onSubmit}>Go</button>
+                </div>
+
+                <div id="home-screen-instructions">
+                    <div className="home-screen-instructions-left is-text-formatted">
+                            <p><b>Phone instructions:</b></p>
+                            <ol>
+                                <li>1. Scan the QR code with your phone or go to: <a href="https://prototype.lumistry.com/">prototype.lumistry.com</a></li>
+                                <li>2. Menu &gt; Add to Home Screen</li>
+                                <li>3. Tap the "Prototype" app on your home screen.</li>
+                                <li>4. Read the description below...</li>
+                            </ol>
+                        </div>
+                        <div className="home-screen-instructions-right">
+                            <div className="lds-graphic is-type-qrcode is-margin-auto"></div>
+
+                        </div>
                 </div>
 
                 <div className="is-text-formatted is-text-center" id="home-screen-main">
                     <h2>{localData.demo.title}</h2>
-                    <p>{localData.demo.description}</p>
-                    <p>Device: <b>{localData.demo.device}</b></p>
-                    <div className="lds-graphic is-type-qrcode is-margin-auto"></div>
+                    {localData.demo.description && <p>{localData.demo.description}</p>}
+
                 </div>
 
-                <div className="is-group is-gap-16" id="home-screen-buttons">
+                <div id="home-screen-buttons" className="is-group is-gap-16">
                     {localData.demo.urls?.map((url, index) => (
                         <a key={index} style={{fontSize: 24, padding: 6, }} className="lds-button is-green" href={url}>{localData.demo.type === 'test' ? `${index + 1}` : 'Start'}</a>
                     ))}
                 </div>
 
-                <button className="lds-button is-size-lg is-tertiary" onClick={onLogout}>Exit</button>
+                <button id="home-screen-exitbutton" className="lds-button is-size-lg is-tertiary" onClick={onLogout}>Exit</button>
 
             </div>
 

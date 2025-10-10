@@ -22,12 +22,13 @@ function Wrapper(props) {
     return (
 
         <div class="lds-phonelayout">
+            <a href="/" className="lds-phonelayout-home"></a>
 
         {/* <div class="lds-phonelayout-header"><i onClick={onClick} class="lds-graphic is-type-youtpharmacy-inv"></i></div> */}
         {showHeader !== false && <div class="lds-phonelayout-header"><i onClick={onClick} class="lds-graphic is-type-youtpharmacy-inv"></i></div>}
         <div class="lds-phonelayout-content is-rel">
 
-            {false && <div className="lds-loader"><div className="lds-loader-spinner"></div></div>}
+            {loading && <div className="lds-loader"><div className="lds-loader-spinner"></div></div>}
 
             {children}
 

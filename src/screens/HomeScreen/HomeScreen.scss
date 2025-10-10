@@ -1,8 +1,8 @@
 
 
 #home-screen {
-    border: 1px solid red;
     margin: 0 auto;
+    padding: 16px;
     max-width: 520px;
     display: flex;
     flex-direction: column;
@@ -11,18 +11,65 @@
     height: 100%;
     width: 100%;
 
+    .lds-logo {
+
+    }
+
+    &-instructions {
+        display: flex;
+        background-color: #F4F8FB;
+        border: 1px solid #E0E0E0;
+        border-radius: 10px;
+        flex-direction: row;
+        // justify-content: space-between;
+        gap: 12px;
+        align-items: left;
+        padding: 12px 16px;
+        margin-bottom: 24px;
+        li {font-size: 14px;}
+        p {padding-bottom: 8px;}
+    }
+    .is-type-qrcode {
+        // border: 1px solid rgb(202, 202, 202);
+        border-radius: 10px;
+        background-color: white;
+        // padding: 20px;
+        background-size: 90%;
+        // margin-top: 40px;
+        // margin-bottom: 60px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #home-screen-instructions {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 24px;
+    }
 }
 
 #home-screen-content {
+
     width: 100%;
+    margin-top: 40px;
     background-color: white;
-    margin: 0 auto;
+    margin: 24px auto 0;
     border-radius: 10px;
     padding: 20px;
 }   
 
 #home-screen-top {
     margin-bottom: 24px;
+    .lds-input {
+        max-width: none
+    }
+    .lds-button {
+        height: 44px;
+        width: 100px;
+    }
 }
 
 #home-screen-main {
@@ -31,12 +78,23 @@
 
 #home-screen-buttons {
     margin-top: 24px;
+    display: flex;
+    justify-content: center;
+
+    .lds-button {
+        max-width: 200px;
+    }
+}
+
+#home-screen-exitbutton {
+    margin: 24px auto 0;
+    padding: 0;
 }
 
 
 
+
 #login-screen {
-    border: 1px solid red;
     margin: 0 auto;
     max-width: 320px;
     display: flex;

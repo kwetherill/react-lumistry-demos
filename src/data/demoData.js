@@ -3,7 +3,7 @@ const data = [
       "code": "guestappt",
       "name": "guestappt",
       "title": "Guest Appointment",
-      "description": "This is a demo of the guest appointment page",
+      "description": "You want to book an appointment at a new pharmacy in your neighborhood. The pharmacy is closed but there's a QR code on the window...",
       "type": "test",
       "device": "phone",
       "urls": ["guestappt/#1", "guestappt/#2"],
